@@ -6,7 +6,7 @@ Display a column that separates content areas vertically in your email.
 
 ```svelte
 <script>
-	import { Column, Section } from 'svelte-email';
+	import { Column, Section } from 'svelte-mail';
 </script>
 
 <Section>

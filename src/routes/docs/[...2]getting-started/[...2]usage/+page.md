@@ -6,7 +6,7 @@ Create a new email template in the `src/$lib/emails` directory:
 
 ```svelte title="src/$lib/emails/welcome.svelte"|copy
 <script lang="ts">
-	import { Button, Container, Head, Hr, Html, Img, Preview, Section, Text } from 'svelte-email';
+	import { Button, Container, Head, Hr, Html, Img, Preview, Section, Text } from 'svelte-mail';
 
 	export let firstName = 'John';
 
@@ -61,7 +61,7 @@ Create a new email template in the `src/$lib/emails` directory:
 
 <Html lang="en">
 	<Head />
-	<Preview preview="Welcome to svelte-email" />
+	<Preview preview="Welcome to svelte-mail" />
 	<Section style={main}>
 		<Container style={container}>
 			<Img
@@ -71,10 +71,10 @@ Create a new email template in the `src/$lib/emails` directory:
 				width="200"
 				height="50"
 			/>
-			<Text style={paragraph}>{firstName}, welcome to svelte-email</Text>
+			<Text style={paragraph}>{firstName}, welcome to svelte-mail</Text>
 			<Text style={paragraph}>A Svelte component library for building responsive emails</Text>
 			<Section style={btnContainer}>
-				<Button pX={12} pY={12} style={button} href="https://github.com/carstenlebek/svelte-email">
+				<Button pX={12} pY={12} style={button} href="https://github.com/carstenlebek/svelte-mail">
 					View on GitHub
 				</Button>
 			</Section>
@@ -90,11 +90,11 @@ Create a new email template in the `src/$lib/emails` directory:
 
 ### HTML
 
-The email templates have to be rendered to HTML on the server. This can be done using the `render` function from `svelte-email`:
+The email templates have to be rendered to HTML on the server. This can be done using the `render` function from `svelte-mail`:
 
 ```js title="src/routes/send-welcome-email/+server.ts"|copy
 import WelcomeEmail from '$lib/emails/welcome.svelte';
-import { render } from 'svelte-email';
+import { render } from 'svelte-mail';
 
 export async function get() {
 	const html = await render({
@@ -116,7 +116,7 @@ To generate a plain text version of the email, you can set the `plainText` optio
 
 ```js title="src/routes/send-welcome-email/+server.ts"|copy
 import WelcomeEmail from '$lib/emails/welcome.svelte';
-import { render } from 'svelte-email';
+import { render } from 'svelte-mail';
 
 export async function get() {
 	const plainText = await render({

@@ -6,7 +6,7 @@ Transform Svelte components into HTML email templates.
 
 ```svelte title="src/$lib/emails/Hello.svelte"
 <script>
-	import { Button, Hr, Html, Text } from 'svelte-email';
+	import { Button, Hr, Html, Text } from 'svelte-mail';
 
 	export let name = 'World';
 </script>
@@ -24,7 +24,7 @@ Transform Svelte components into HTML email templates.
 
 ```js title="src/routes/emails/hello/+server.js"
 import { json } from '@sveltejs/kit';
-import { render } from 'svelte-email';
+import { render } from 'svelte-mail';
 import Hello from '$lib/emails/Hello.svelte';
 
 export function GET() {
@@ -45,7 +45,7 @@ This will return the following HTML:
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html id="__svelte-email" lang="en">
+<html id="__svelte-mail" lang="en">
 	<head></head>
 	<body>
 		<p style="font-size:14px;line-height:24px;margin:16px 0;">Hello, World!</p>
@@ -85,7 +85,7 @@ Here’s how to convert a Svelte component into plain text.
 
 ```js title="src/routes/emails/hello/+server.js"
 import { json } from '@sveltejs/kit';
-import { render } from 'svelte-email';
+import { render } from 'svelte-mail';
 import Hello from '$lib/emails/Hello.svelte';
 
 export function GET() {

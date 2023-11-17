@@ -6,12 +6,10 @@ A link that is styled to look like a button.
 
 ```svelte
 <script>
-	import { Button } from 'svelte-email';
+	import { Button } from 'svelte-mail';
 </script>
 
-<Button href="https://example.com" style={{ color: '#61dafb' }}>
-	Click me
-</Button>
+<Button href="https://example.com" style={{ color: '#61dafb' }}>Click me</Button>
 ```
 
 ## Props

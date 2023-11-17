@@ -6,7 +6,7 @@ A hyperlink to web pages, email addresses, or anything else a URL can address.
 
 ```svelte
 <script>
-	import { Link } from 'svelte-email';
+	import { Link } from 'svelte-mail';
 </script>
 
 <Link href="https://svelte.dev">Svelte</Link>

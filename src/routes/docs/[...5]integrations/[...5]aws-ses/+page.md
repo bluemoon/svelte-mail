@@ -5,11 +5,11 @@ Learn how to send an email using Svelte Email and the AWS SES Node.js SDK.
 ## 1. Install dependencies
 
 ```bash title="npm"|copy
-npm install svelte-email aws-sdk
+npm install svelte-mail aws-sdk
 ```
 
 ```bash title="pnpm"|copy
-pnpm add svelte-email aws-sdk
+pnpm add svelte-mail aws-sdk
 ```
 
 ## 2. Create an email using Svelte
@@ -18,7 +18,7 @@ Start by building your email template in a `.svelte` file. For example, let's cr
 
 ```svelte title="src/$lib/emails/Hello.svelte"
 <script>
-	import { Button, Hr, Html, Text } from 'svelte-email';
+	import { Button, Hr, Html, Text } from 'svelte-mail';
 
 	export let name = 'World';
 </script>
@@ -37,7 +37,7 @@ Start by building your email template in a `.svelte` file. For example, let's cr
 Next, create a server route that will convert the Svelte template to HTML and send the email using the AWS SES Node.js SDK.
 
 ```js title="src/routes/emails/hello/+server.js"
-import { render } from 'svelte-email';
+import { render } from 'svelte-mail';
 import Hello from '$lib/emails/Hello.svelte';
 import AWS from 'aws-sdk';
 

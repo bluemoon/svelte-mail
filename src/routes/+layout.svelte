@@ -68,7 +68,7 @@
 
 		<div class="socials" slot="navbar-right-alt">
 			<SocialLink type="twitter" href="https://twitter.com/carstenlebek1" />
-			<SocialLink type="gitHub" href="https://github.com/carstenlebek/svelte-email" />
+			<SocialLink type="gitHub" href="https://github.com/carstenlebek/svelte-mail" />
 		</div>
 
 		<slot />

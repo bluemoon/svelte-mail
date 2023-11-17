@@ -6,7 +6,7 @@ A Svelte html component to wrap emails.
 
 ```svelte
 <script>
-	import { Html } from 'svelte-email';
+	import { Html } from 'svelte-mail';
 </script>
 
 <Html lang="en">

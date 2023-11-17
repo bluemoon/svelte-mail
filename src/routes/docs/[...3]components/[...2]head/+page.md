@@ -6,7 +6,7 @@ Contains head components, related to the document such as style and meta element
 
 ```svelte
 <script>
-	import { Head } from 'svelte-email';
+	import { Head } from 'svelte-mail';
 </script>
 
 <Head>

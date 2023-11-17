@@ -6,7 +6,7 @@ Display a divider that separates content areas in your email.
 
 ```svelte
 <script>
-	import { Hr } from 'svelte-email';
+	import { Hr } from 'svelte-mail';
 </script>
 
 <Hr />

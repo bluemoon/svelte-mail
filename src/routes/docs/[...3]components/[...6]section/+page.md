@@ -6,7 +6,7 @@ Display a section that can be formatted using columns.
 
 ```svelte
 <script>
-	import { Section, Text } from 'svelte-email';
+	import { Section, Text } from 'svelte-mail';
 </script>
 
 <Section>

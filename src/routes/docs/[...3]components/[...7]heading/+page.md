@@ -6,7 +6,7 @@ A block of heading text.
 
 ```svelte
 <script>
-	import { Heading } from 'svelte-email';
+	import { Heading } from 'svelte-mail';
 </script>
 
 <Heading as="h1">Hello world</Heading>

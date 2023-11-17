@@ -14,7 +14,7 @@
 </script>
 
 <div
-	id="__svelte-email-preview"
+	id="__svelte-mail-preview"
 	style={styleToString({
 		display: 'none',
 		overflow: 'hidden',

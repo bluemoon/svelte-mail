@@ -5,11 +5,11 @@ Learn how to send an email using Svelte Email and Nodemailer.
 ## 1. Install dependencies
 
 ```bash title="npm"|copy
-npm install svelte-email nodemailer
+npm install svelte-mail nodemailer
 ```
 
 ```bash title="pnpm"|copy
-pnpm add svelte-email nodemailer
+pnpm add svelte-mail nodemailer
 ```
 
 ## 2. Create an email using Svelte
@@ -22,7 +22,7 @@ Start by building your email template in a `.svelte` file. For example, let's cr
 
 ```svelte title="src/$lib/emails/Hello.svelte"
 <script>
-	import { Button, Hr, Html, Text } from 'svelte-email';
+	import { Button, Hr, Html, Text } from 'svelte-mail';
 
 	export let name = 'World';
 </script>
@@ -42,7 +42,7 @@ Next, create a server route that will convert the Svelte template to HTML and se
 
 ```js title="src/routes/emails/hello/+server.js"
 import { json } from '@sveltejs/kit';
-import { render } from 'svelte-email';
+import { render } from 'svelte-mail';
 import Hello from '$lib/emails/Hello.svelte';
 import nodemailer from 'nodemailer';
 

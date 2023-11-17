@@ -1,8 +1,7 @@
 # Installation
 
-To start using `svelte-email` in your SvelteKit project, you just need to install the package:
+To start using `svelte-mail` in your SvelteKit project, you just need to install the package:
 
-```bash title="Install svelte-email"|copy
-npm install svelte-email
+```bash title="Install svelte-mail"|copy
+npm install svelte-mail
 ```
-

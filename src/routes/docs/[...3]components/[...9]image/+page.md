@@ -6,7 +6,7 @@ Display an image in your email.
 
 ```svelte
 <script>
-	import { Img } from 'svelte-email';
+	import { Img } from 'svelte-mail';
 </script>
 
 <Img

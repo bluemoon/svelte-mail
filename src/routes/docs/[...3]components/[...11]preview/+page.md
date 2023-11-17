@@ -10,10 +10,10 @@ Email clients have this concept of “preview text” which gives insight into w
 
 ```svelte
 <script>
-	import { Preview } from 'svelte-email';
+	import { Preview } from 'svelte-mail';
 </script>
 
-<Preview preview="Welcome to svelte-email" />
+<Preview preview="Welcome to svelte-mail" />
 ```
 
 ## Props

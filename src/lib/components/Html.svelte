@@ -7,6 +7,6 @@
 	export let lang = 'en';
 </script>
 
-<html {...$$restProps} id="__svelte-email" {lang}>
+<html {...$$restProps} id="__svelte-mail" {lang}>
 	<slot />
 </html>

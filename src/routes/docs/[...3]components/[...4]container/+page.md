@@ -6,7 +6,7 @@ A layout component that centers all the email content.
 
 ```svelte
 <script>
-	import { Container } from 'svelte-email';
+	import { Container } from 'svelte-mail';
 </script>
 
 <Container>
