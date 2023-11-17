@@ -4,7 +4,6 @@ Build and send emails using Svelte and TypeScript.
 
 ### Why
 
-
 > We believe that email is an extremely important medium for people to communicate. However, we need to stop developing emails like 2010, and rethink how email can be done in 2022 and beyond. Email development needs a revamp. A renovation. Modernized for the way we build web apps today.
 
 [React Email](https://github.com/resendlabs/react-email)
@@ -52,7 +51,8 @@ In order to use Svelte Email with any email service provider, you’ll need to c
 
 ### Author
 
-- Carsten Lebek ([@carstenlebek1](https://twitter.com/carstenlebek1))
+- Bradford Toney ([@bradfordtoney](https://twitter.com/bradfordtoney))
+- Forked from: Carsten Lebek ([@carstenlebek1](https://twitter.com/carstenlebek1))
 
 #### Based on [React Email](https://github.com/resendlabs/react-email) by
 

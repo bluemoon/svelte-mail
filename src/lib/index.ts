@@ -10,6 +10,7 @@ import Img from './components/Img.svelte';
 import Link from './components/Link.svelte';
 import Preview from './components/Preview.svelte';
 import Section from './components/Section.svelte';
+import Tailwind from './components/Tailwind.svelte';
 import Text from './components/Text.svelte';
 
 import { render } from './render';
@@ -29,6 +30,7 @@ export {
 	Link,
 	Preview,
 	Section,
+	Tailwind,
 	Text,
 	render,
 	styleToString

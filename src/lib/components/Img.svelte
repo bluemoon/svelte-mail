@@ -9,6 +9,7 @@
 	import { getContext, hasContext } from 'svelte';
 	import { TAILWIND_CONTEXT } from '$lib/utils/tailwind';
 	import { tailwindToCSS } from 'tw-to-css';
+
 	interface $$Props extends Omit<HTMLAttributes<HTMLImageElement>, 'style'> {
 		style?: StandardProperties & StandardLonghandProperties & StandardShorthandProperties;
 		alt: string;
@@ -18,7 +19,7 @@
 	}
 
 	export let style: $$Props['style'] = {};
-	let className: string | undefined = undefined;
+	let className: string | null | undefined = undefined;
 	export { className as class };
 	export let alt = '';
 	export let src = '';

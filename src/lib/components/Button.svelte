@@ -20,7 +20,7 @@
 
 	export let href = '';
 	export let style = {};
-	let className: string | undefined = undefined;
+	let className: string | null | undefined = undefined;
 	export { className as class };
 
 	let tailwindStyle = {};

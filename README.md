@@ -4,9 +4,9 @@
 <div align="center">Designing emails has never been easier.</div>
 <br />
 <div align="center">
-<a href="https://svelte-email.vercel.app/">Documentation</a> 
+<a href="https://svelte-email.vercel.app/">Documentation</a>
 <span> · </span>
-<a href="https://github.com/carstenlebek/svelte-email">GitHub</a> 
+<a href="https://github.com/carstenlebek/svelte-email">GitHub</a>
 </div>
 
 # Introduction
@@ -18,11 +18,11 @@ After seeing [react-email](https://github.com/resendlabs/react-email) I have dec
 Install the package to your existing SvelteKit project:
 
 ```bash title="npm"
-npm install svelte-email
+npm install svelte-mail
 ```
 
 ```bash title="pnpm"
-pnpm install svelte-email
+pnpm install svelte-mail
 ```
 
 # Getting started
@@ -33,18 +33,21 @@ pnpm install svelte-email
 
 ```html
 <script>
-	import { Button, Hr, Html, Text } from 'svelte-email';
+	import { Button, Hr, Html, Text, Tailwind } from 'svelte-mail';
 
 	export let name = 'World';
 </script>
 
-<Html lang="en">
-	<Text>
-		Hello, {name}!
-	</Text>
-	<Hr />
-	<Button href="https://svelte.dev">Visit Svelte</Button>
-</Html>
+<!-- Optional Tailwind support  -->
+<Tailwind>
+	<html lang="en">
+		<Text class="text-xl leading-10"> Hello, {name}! </Text>
+
+		<hr />
+
+		<button href="https://svelte.dev">Visit Svelte</button>
+	</html>
+</Tailwind>
 ```
 
 ## 2. Send email
