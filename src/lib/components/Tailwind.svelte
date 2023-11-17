@@ -6,3 +6,5 @@
 	export let config: TailwindConfig = {};
 	setContext(TAILWIND_CONTEXT, config);
 </script>
+
+<slot />
