@@ -6,6 +6,10 @@
 	} from 'csstype';
 	import { pxToPt, styleToString } from '$lib/utils';
 	import type { HTMLAttributes } from 'svelte/elements';
+	import { getContext, hasContext } from 'svelte';
+	import { TAILWIND_CONTEXT } from '$lib/utils/tailwind';
+	import { tailwindToCSS } from 'tw-to-css';
+
 	interface $$Props extends Omit<HTMLAttributes<HTMLAnchorElement>, 'style'> {
 		style?: StandardProperties & StandardLonghandProperties & StandardShorthandProperties;
 		href: string;
@@ -18,6 +22,17 @@
 	export let style = {};
 	let className: string | undefined = undefined;
 	export { className as class };
+
+	let tailwindStyle = {};
+	if (hasContext(TAILWIND_CONTEXT) && className) {
+		const { twj } = tailwindToCSS({
+			config: getContext(TAILWIND_CONTEXT)
+		});
+
+		tailwindStyle = twj(className);
+		className = undefined;
+	}
+
 	export let pX = 0;
 	export let pY = 0;
 	export let target = '_blank';
@@ -35,7 +50,8 @@
 			textDecoration: 'none',
 			display: 'inline-block',
 			maxWidth: '100%',
-			padding: `${paddingY}px ${paddingX}px`
+			padding: `${paddingY}px ${paddingX}px`,
+			...tailwindStyle
 		};
 	};
 
@@ -57,7 +73,13 @@
 	};
 </script>
 
-<a {...$$restProps} {href} {target} style={styleToString(buttonStyle({ ...style, pX, pY }))} class={className}>
+<a
+	{...$$restProps}
+	{href}
+	{target}
+	style={styleToString(buttonStyle({ ...style, pX, pY }))}
+	class={className}
+>
 	<span>
 		{@html `<!--[if mso]><i style="letter-spacing: ${pX}px;mso-font-width:-100%;mso-text-raise:${textRaise}" hidden>&nbsp;</i><![endif]-->`}
 	</span>
